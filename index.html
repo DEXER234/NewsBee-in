@@ -293,7 +293,7 @@
         });
 
         async function fetchNews(category) {
-            const url = `${BASE_URL}?category=${category}&country=us&apiKey=${API_KEY}`;
+            const url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${API_KEY}`;
             try {
                 const response = await fetch(url);
                 const data = await response.json();
